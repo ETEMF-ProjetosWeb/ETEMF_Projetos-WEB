@@ -38,14 +38,15 @@
               </li>
               <hr class="somepc">
               <li class="nav-item">
-                <a class="nav-link menuzin" href="#"><b>PORTAL DO ALUNO</b></a>
+                <a class="nav-link menuzin" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalToggle"><b>PORTAL DO ALUNO</b></a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-          <img src="imagens/campo.jpg" class="imginst" alt="" width="100%" height="200px">
+          <img src="imagens/bannerinst.jpg" alt="..." class="somecell" style="width: 100%;">
+          <img src="imagens/bannerinstresponsivo.jpg" alt="..." class="somepc" style="width: 100%;">
 
     </main>
     <br class="somepc">
@@ -54,7 +55,7 @@
       <br class="somepc">
       <br class="somepc">
       <div class="col-md-6">
-        <img src="imagens/sobre_etemf.jpg" class="imgcell" alt="" width="450px" height="300px">
+        <img src="imagens/imgsobreetemf.jpg" class="imgcell" alt="">
         <br class="somepc"><br class="somepc">
       </div>
       <div class="col-md-6" style="font-size: 21px;">
@@ -73,7 +74,7 @@
         </div>
 
         <div class="col-md-6">
-          <img src="imagens/institucional.png" alt="" width="450px" height="300px">
+          <img src="imagens/imgestrutura.jpg">
         </div>
   
         </div>
@@ -81,7 +82,7 @@
           <h1 class="titulo"><b>NOS<span class="sublinhado">SA ESTRUTURA</h1></span></b></h1>
           <br class="somepc">
           <div class="col-md-6">
-            <img src="imagens/institucional.png" class="imgcell" alt="" width="450px" height="300px">
+            <img src="imagens/imgestrutura.jpg" class="imgcell" alt="">
             <br class="somepc"><br class="somepc">
           </div>
           <div class="col-md-6" style="font-size: 21px;">
@@ -145,6 +146,7 @@
           </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 <footer>
   <center>
@@ -176,4 +178,127 @@
     <p id="copyright">© 2022 Copyright - Escola Técnica Estadual Mário Fonseca</p>
 </center>
 </footer>
+
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h5 class="modal-title modaltit-portalaluno" id="exampleModalToggleLabel" style="text-align: center;">Portal do Aluno</h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="#" onsubmit="entrada(); return false">
+            <p style="color: red; display: none;" id="valuse">CPF ou Senha inválidos</p>
+            <input type="text" class="form-control" id="cpf" placeholder="CPF" onkeypress="mascara_cpf(this)" maxlength="14" onkeydown="return somente_numero(event)" onkeyup="salto(this.name,this.value)">
+            <p style="color: red;display: none;" id="valcpf">Esse campo é obrigatório! Preencha com seu CPF</p>
+            <br>
+         
+            <input type="password" class="form-control" id="senha" placeholder="Senha">
+            <p style="color: red;display: none;" id="valsenha">Esse campo é obrigatório! Preencha com sua Senha</p>
+            <input type="checkbox" class="form-check-input" id="checkbox" onclick="mostrar()">
+            <label class="form-check-label" for="checkbox">Mostrar Senha</label>
+            <br><br>
+          
+            <p>Ainda não é aluno? <a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Matricule-se</a></p>
+          <center><button type="submit" class="btn" style="width: 100%;background-color: #023E8A;color: white;">Entrar</button></center>
+        
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content matricule-se">
+      <div class="modal-header">
+        <h5 class="modal-title ficha_matricula" id="exampleModalToggleLabel2" style="text-align: center;">Ficha de Matrícula</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body matricula">
+        <form class="row g-3" onsubmit="matricula(); return false">
+          <div class="col-12">
+            <label for="curso" class="form-label">Curso de Interesse: </label>
+            <select class="form-select" name="curso" id="curso">
+              <option value="nada">Selecione...</option>
+              <option value="">Tecnologia da Informação</option>
+              <option value="">Enfermagem</option>
+              <option value="">Análises Clínicas</option>
+              <option value="">Edificações</option>
+            </select>
+            <p style="color: red;display: none;" id="valcurso">Esse campo é obrigatório! Preencha com seu Curso de Interesse</p>
+          </div>
+            <div class="col-12">
+              <label for="nome" class="form-label">Nome Completo: </label>
+              <input type="text" class="form-control" id="nomemat" placeholder="Isadora Pinto da Silva">
+              <p style="color: red;display: none;" id="valnomematricula">Esse campo é obrigatório! Preencha com seu Nome Completo.</p>
+            </div>
+      
+          <div class="col-md-4">
+            <label for="nascimento" class="form-label">Data de Nascimento: </label>
+            <input type="date" class="form-control" id="nascimento">
+            <p style="color: red;display: none;" id="valnascimento">Esse campo é obrigatório! Preencha com sua Data de Nascimento.</p>
+          </div>
+          <div class="col-md-4">
+            <label for="cpfmat" class="form-label">CPF: </label>
+            <input type="text" class="form-control" id="cpfmat" onkeydown="return somente_numero(event)" onkeypress="mascara_cpf(this)" placeholder="XXX.XXX.XXX-XX" maxlength="14">
+            <p style="color: red;display: none;" id="valcpfmatricula">Esse campo é obrigatório! Preencha com seu CPF</p>
+          </div>
+          <div class="col-md-4">
+            <label for="inputAddress" class="form-label">Sexo: </label>
+            <br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+              <label class="form-check-label" for="inlineRadio1">Masculino</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Feminino</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="endereco" class="form-label">Endereço: </label>
+            <input type="text" class="form-control" id="endereco" placeholder="Rua, Número, Complemento, Bairro, Cidade, Estado">
+            <p style="color: red;display: none;" id="valendereco">Esse campo é obrigatório! Preencha com seu Endereço.</p>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">E-mail: </label>
+            <input type="email" class="form-control" id="emailmat" placeholder="etemariofonseca@gmail.com">
+            <p style="color: red;display: none;" id="valemailmatricula">Esse campo é obrigatório! Preencha com seu E-mail.</p>
+          </div>
+          <div class="col-md-6">
+            <label for="telefone" class="form-label">Telefone: </label>
+            <input type="text" class="form-control" id="telefone" onkeydown="return somente_numero(event)" placeholder="(XX) XXXXX-XXXX" maxlength="15" onkeypress="mascara_telefone(this)">
+            <p style="color: red;display: none;" id="valtelefone">Esse campo é obrigatório! Preencha com seu Telefone</p>
+          </div>
+          <div class="col-12">
+            <label for="naturalidade" class="form-label">Naturalidade: </label>
+            <input type="text" class="form-control" id="naturalidade" placeholder="Brasileiro">
+            <p style="color: red;display: none;" id="valnaturalidade">Esse campo é obrigatório! Preencha com sua naturalidade.</p>
+          </div>
+          <div class="col-12">
+            <label for="escolaridade" class="form-label">Nível de Escolaridade: </label>
+            <select class="form-select" name="escolaridade" id="escolaridade" required>
+              <option value="nada">Selecione...</option>
+              <option value="">Ensino Médio Completo</option>
+              <option value="">Ensino Médio Incompleto</option>
+              <option value="">Ensino Fundamental Completo</option>
+              <option value="">Ensino Fundamental Incompleto</option>
+            </select>
+            <p style="color: red;display: none;" id="valescolaridade">Esse campo é obrigatório! Preencha com seu Nível de Escolaridade</p>
+            <br>
+          </div>
+          <p>Já é aluno? <a href="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Logar</a></p>
+          <div class="col-12">
+            <button type="submit" class="btn botao" style="width: 100%;">Enviar Pedido de Matrícula</button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
 </html>
