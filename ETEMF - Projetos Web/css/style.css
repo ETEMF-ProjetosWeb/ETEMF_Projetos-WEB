@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    margin-left: 25px;
+}
+
+.menuzin {
+    color: #023E8A;
+    font-size: 22px;
+}
+
+.menuzin:hover {
+    color: rgb(2, 72, 163);
+}
+
+.carousel .carousel-indicators button {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-color: blue;
+    border-width: 1px;
+}
+
+.somepc {
+    display: none;
+}
+
+.sublinhado {
+    text-decoration: underline #CC0808;
+}
+
+.padvid {
+    padding: 8px 15px 8px 15px;
+    margin-left: 40px;
+    margin-right: 0px;
+}
+.estudenaetemf {
+text-align: 25px;
+}
+
+.ltit {
+    margin-left: 50px;
+    margin-right: -240px;
+}
+
+.titulo {
+    color: #023E8A;
+}
+.textindex {
+    margin-left: 50px;
+    font-size: 20px;
+    margin-right: -200px;
+}
+.imgaprovados {
+    width: 100%;
+}
+
+.quadrado {
+    background-color: #023E8A;
+    width: 100%;
+    height: 40px;
+}
+
+.padlocal {
+    padding-left: 100px;
+    padding-top: 10px;
+}
+
+.contato {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.imgcursos {
+    margin-right: 210px;
+}
+
+
+footer {
+    color: white;
+    margin-top: 200px;
+    padding: 20px;
+    background-color: #023E8A;
+}
+
+.form-control, .form-select {
+    background-color: rgba(209, 209, 209, 0.404);
+}
+
+.botao {
+    background-color: #023E8A;
+    color: white;
+}
+.nomes {
+    font-size: 16px;
+}
+#escudo {
+    margin-left: 0%;
+}
+.desenvolvido {
+    font-size: 30px;
+    margin-top: -42px;
+    margin-left: 0px;
+}
+#copyright {
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
+/*====================== INSTITUCIONAL =========================*/
+
+.sobre_etemf {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.mapa {
+    border:0; 
+    padding-top: 10px; 
+    padding-right: 100px; 
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+.imginst {
+    height: 362px;
+}
+
+/*======================== CURSOS ========================= */
+.cursos {
+    margin-left: 0px;
+}
+
+.titcurso {
+    text-align: left; 
+    font-size: 55px;
+    margin-left: 30px;
+}
+.card {
+    margin-right: 0px;
+}
+.card-right {
+    margin-left: 0px;
+}
+.cursos-col {
+    margin-right: 10px;
+}
+.cursos-bottom {
+    background-color: #023E8A;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*====================== PORTAL DO ALUNO */
+
+.modaltit-portalaluno {
+    margin-left: 34%;
+}
+.ficha_matricula {
+    margin-left: 32%;
+}
+
+
+
+.dados{
+    margin-left: 5%;
+    margin-right: 100px;
+}
+.row {
+    margin-right: 10px;
+}
+
+/*Celular*/
+@media (max-width: 576px) {
+    .somecell {
+        display: none;
+    }
+    .logo img {
+        width: 200px;
+    }
+
+    .somepc {
+        display: block;
+    }
+
+    .contato {
+        margin: 0;
+    }
+
+    .padvid {
+        margin: 0;
+    }
+
+    .titulo {
+        margin: 0;
+        text-align: center;
+    }
+    
+    .estudenaetemf {
+        padding: 0;
+        margin: 0;
+    }
+    .estude_etemf {
+        margin: 0;
+    }
+    .textindex {
+        width: 400px;
+        margin: 25px;
+    
+    }
+
+    /* Institucional */
+    .sobre_etemf {
+        margin: 0;
+    }
+
+    .imgcell {
+        width: 400px;
+        display: block;
+        margin: auto;
+    }
+    .padlocal {
+        padding-left: 0;
+    }
+    .mapa {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .imginst {
+        height: 200px;
+    }
+
+    /* Cursos */
+
+    .titcurso {
+        font-size: 38px;
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .quadrado {
+        height: 20px;
+    }
+}
