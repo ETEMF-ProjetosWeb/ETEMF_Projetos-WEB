@@ -176,6 +176,9 @@ footer {
 
 /*Celular*/
 @media (max-width: 576px) {
+    body {
+        text-align: center;
+    }
     .somecell {
         display: none;
     }
