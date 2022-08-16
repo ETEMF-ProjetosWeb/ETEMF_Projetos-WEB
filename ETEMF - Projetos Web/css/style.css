@@ -8,7 +8,15 @@ nav {
 
 .menuzin {
     color: #023E8A;
-    font-size: 22px;
+    font-size: 17px;
+}
+
+.logo img {
+    width: 230px;
+}
+
+.opcoes ul {
+    margin-left: auto;
 }
 
 .menuzin:hover {
